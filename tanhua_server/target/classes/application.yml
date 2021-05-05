@@ -1,0 +1,30 @@
+server:
+  port: 9527
+dubbo:
+  application:
+    name: tanhua_server
+  registry:
+    address: zookeeper://192.168.197.160:2181
+  consumer:
+    check: false
+# log
+logging:
+  level:
+    root: info
+    com:
+      tanhua: debug
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %msg - %logger{15}%n\'
+tanhua:
+  redisValidateCodeKeyPrefix: VALIDATECODE_
+  secret: 76bd425b6f29f7fcc2e0bfc286043df1
+  sms:
+    signName: 黑马程序员
+    parameterName: code
+    validateCodeTemplateCode: SMS_164508533
+    accessKeyId: LTAI5tAcs2HCvKCyHBrYU5d1
+    accessKeySecret: eufAkeZZgjDLNIKkbMCslqyygK2smd
+
+spring:
+  redis:
+    host: 192.168.197.160
